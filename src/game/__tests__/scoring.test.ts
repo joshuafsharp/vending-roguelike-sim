@@ -5,7 +5,6 @@ import { findSynergiesForSlot, calculateSalePrice, simulateNight } from "../scor
 // Helper products
 const cola: Product = { id: "cola", name: "Cola", basePrice: 2.0, tags: ["Drink", "Sweet"] };
 const chips: Product = { id: "chips", name: "Chips", basePrice: 1.5, tags: ["Snack", "Salty"] };
-const energy: Product = { id: "energy", name: "Energy Drink", basePrice: 3.5, tags: ["Drink", "Caffeine"] };
 const candy: Product = { id: "candy", name: "Candy Bar", basePrice: 1.0, tags: ["Snack", "Sweet"] };
 
 // Helper rules
@@ -19,12 +18,6 @@ const comboMeal: SynergyRule = {
   id: "combo_meal", name: "Combo Meal",
   description: "Snacks and Drinks boost each other",
   tagA: "Snack", tagB: "Drink", multiplier: 1.5, target: "both",
-};
-
-const sugarRush: SynergyRule = {
-  id: "sugar_rush", name: "Sugar Rush",
-  description: "Sweet boosts adjacent Caffeine",
-  tagA: "Sweet", tagB: "Caffeine", multiplier: 1.5, target: "b",
 };
 
 const sweetTooth: SynergyRule = {
